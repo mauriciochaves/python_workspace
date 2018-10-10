@@ -1,5 +1,5 @@
 from selenium import webdriver
-from automation_test.base.browser_setup import browser_setup
+from base.browser_setup import browser_setup
 
 
 class BaseSetup:

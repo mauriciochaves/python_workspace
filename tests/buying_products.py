@@ -1,9 +1,9 @@
-from automation_test.base.base_setup import BaseSetup
-from automation_test.pages.home_page import HomePage
-from automation_test.pages.product_page import ProductPage
-from automation_test.pages.dresses_page import DressesPage
-from automation_test.pages.shopping_cart_page import ShoppingCartPage
-from automation_test.utilities import data_provider
+from base.base_setup import BaseSetup
+from pages.home_page import HomePage
+from pages.product_page import ProductPage
+from pages.dresses_page import DressesPage
+from pages.shopping_cart_page import ShoppingCartPage
+from utilities import data_provider
 import unittest
 
 

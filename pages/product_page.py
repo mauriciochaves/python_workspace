@@ -1,6 +1,6 @@
-from automation_test.base.base_setup import BaseSetup
-from automation_test.base.webdriver_custom_class import WebDriverCustomClass
-from automation_test.utilities.ui_map import product_page
+from base.base_setup import BaseSetup
+from base.webdriver_custom_class import WebDriverCustomClass
+from utilities.ui_map import product_page
 
 
 class ProductPage(BaseSetup, WebDriverCustomClass):

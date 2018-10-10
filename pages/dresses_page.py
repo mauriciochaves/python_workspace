@@ -1,7 +1,7 @@
-from automation_test.base.base_setup import BaseSetup
-from automation_test.base.webdriver_custom_class import WebDriverCustomClass
-from automation_test.utilities.ui_map import dresses_page, product_page, home_page
-from automation_test.utilities.helpers import wait_and_click
+from base.base_setup import BaseSetup
+from base.webdriver_custom_class import WebDriverCustomClass
+from utilities.ui_map import dresses_page, product_page, home_page
+from utilities.helpers import wait_and_click
 import time
 
 
