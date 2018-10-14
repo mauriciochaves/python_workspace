@@ -8,6 +8,12 @@ home_page = dict(
     womenButtonByXpath="//a[@title='Women']"
 )
 
+sign_up_page = dict(
+    emailAddressByID="email",
+    passwordByID="passwd",
+    signinByID="SubmitLogin",
+)
+
 product_page = dict(
     selectProductByClassName="replace-2x",
     hoverOverProductBoxByClassName="right-block",
@@ -18,7 +24,11 @@ product_page = dict(
 shopping_cart = dict(
     blouseItemInTheCartByLinkText="Blouse",
     pinnedSummerDressByLinkText="Printed Summer Dress",
-    pinnedChiffonDress="Printed Chiffon Dress"
+    pinnedChiffonDress="Printed Chiffon Dress",
+    checkoutCardByID="button_order_cart",
+    proceedToCheckoutSummaryByXpath="//*[@id='center_column']/p[2]/a[1]/span",
+    commentsPurchaseShoppingCardByName="message",
+    proceedToCheckoutAddressByName="processAddress"
 )
 
 dresses_page = dict(
