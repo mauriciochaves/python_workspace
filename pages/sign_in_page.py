@@ -7,7 +7,7 @@ class SignInPage(BaseSetup, WebDriverCustomClass):
 
     def email_address(self, email):
         self.send_keys_to(sign_up_page.get("emailAddressByID"), email)
-
+        #new
     def password_address(self, password):
         self.send_keys_to(sign_up_page.get("passwordByID"), password)
 

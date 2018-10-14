@@ -13,7 +13,7 @@ class ShoppingCartPage(BaseSetup, WebDriverCustomClass):
 
     def proceed_to_checkout_summary_button_click_on(self):
         self.click_on_element(shopping_cart.get("proceedToCheckoutSummaryByXpath"), "xpath")
-
+        #new
     def proceed_to_checkout_address_button_click_on(self):
         self.click_on_element(shopping_cart.get("proceedToCheckoutAddressByName"), "name")
 

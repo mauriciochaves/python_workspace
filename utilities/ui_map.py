@@ -35,7 +35,6 @@ dresses_page = dict(
     summerDressesImageButtonByXpath="(//a[@title='Summer Dresses'])[3]",
     locateAllProductsByXpath="//div[@class='right-block']",
     addProductsToCartByXpath="//a[@title='Add to cart']",
-
     scrollIntoViewByXpath="//ul[@class='product_list grid row']",
     hoverAllElementsByXpath="(//div[@class='right-block'])",
     locateSelectedElementsByXpath="(//div[@class='right-block'])[{0}]",

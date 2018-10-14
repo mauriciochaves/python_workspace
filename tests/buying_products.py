@@ -26,10 +26,12 @@ class BuyingProducts(BaseSetup, unittest.TestCase):
         self.home_page.cart_button()
         self.shopping_cart_page.proceed_to_checkout_summary_button_click_on()
 
+        #sign
         self.sign_in_page.email_address(self.data.get("email"))
         self.sign_in_page.password_address(self.data.get("password"))
         self.sign_in_page.sign_click_on()
 
+        #address
         self.shopping_cart_page.purchase_comments(self.data.get("menssage"))
         self.shopping_cart_page.proceed_to_checkout_address_button_click_on()
 
