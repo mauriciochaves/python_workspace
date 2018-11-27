@@ -1,22 +1,16 @@
 from selenium import webdriver
 import unittest
 import pages
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
+from config import BaseSetup
 
 class NewTest(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome('..\\python_workspace\\learn_python\\drivers\\chromedriver.exe')
-        self.driver.implicitly_wait(10)
-        self.driver.get('http://sampleapp.tricentis.com/101/index.php')
-        self.driver.maximize_window()
-        
+        self.driver = BaseSetup.setUp(self,'chrome')
+        self.driver.get(BaseSetup.url)
 
     def tearDown(self):
-        self.driver.close()
+        BaseSetup.tearDown(self)
 
     def testPageAutomobile(self):
         driver = self.driver

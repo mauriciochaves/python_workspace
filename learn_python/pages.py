@@ -2,7 +2,6 @@ from locators import *
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
 class HomePage (object):
     def click_auto_mobile(self, driver):
         wait = WebDriverWait(driver, 10)
