@@ -3,6 +3,7 @@ import unittest
 import pages
 from config import BaseSetup
 
+
 class NewTest(unittest.TestCase):
 
     def setUp(self):
@@ -17,8 +18,11 @@ class NewTest(unittest.TestCase):
         home_page = pages.HomePage()
         auto_mobile = pages.AutoMobilePage()
 
+        BaseSetup.printScr(self)
         home_page.click_auto_mobile(driver)
+        BaseSetup.printScr(self)
         self.assertTrue(auto_mobile.is_title_matches(driver))
+        BaseSetup.printScr(self)
         
 if __name__=='__main__':
     unittest.main()

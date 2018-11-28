@@ -1,8 +1,11 @@
 from selenium import webdriver
+from datetime import datetime
+
 
 class BaseSetup:
 
     url = 'http://sampleapp.tricentis.com/101/index.php'
+    
 
     def setUp(self, browser):
         
@@ -19,3 +22,8 @@ class BaseSetup:
     
     def tearDown(self):
         self.driver.quit()
+
+    def printScr(self):
+        now = datetime.now()
+        nomeArquivo = 'teste_'+str(now.day)+str(now.month)+str(now.year)+str(now.hour)+str(now.minute)+str(now.second)+'.png'
+        self.driver.save_screenshot("C:\\Projetos\\python_workspace\\learn_python\\screns\\" +nomeArquivo)
