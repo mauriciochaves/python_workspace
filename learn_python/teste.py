@@ -7,7 +7,7 @@ from config import BaseSetup
 class NewTest(unittest.TestCase):
 
     def setUp(self):
-        self.driver = BaseSetup.setUp(self,'chrome')
+        self.driver = BaseSetup.setUp(self,"chrome")
         self.driver.get(BaseSetup.url)
 
     def tearDown(self):
@@ -21,7 +21,7 @@ class NewTest(unittest.TestCase):
         BaseSetup.printScr(self)
         home_page.click_auto_mobile(driver)
         BaseSetup.printScr(self)
-        self.assertTrue(auto_mobile.is_title_matches(driver))
+        self.assertEqual(auto_mobile.is_title_matches(driver), "Automobile Insurance")
         BaseSetup.printScr(self)
         
 if __name__=='__main__':

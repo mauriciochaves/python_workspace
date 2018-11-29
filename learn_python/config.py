@@ -10,7 +10,7 @@ class BaseSetup:
     def setUp(self, browser):
         
         if browser == "chrome":
-            self.driver = webdriver.Chrome('..\\python_workspace\\learn_python\\drivers\\chromedriver.exe')
+            self.driver = webdriver.Chrome('C:\\Projetos\\workspace\\python_workspace\\learn_python\\drivers\\chromedriver.exe')
         elif browser == "firefox":
             self.driver = webdriver.Firefox()
         else:
