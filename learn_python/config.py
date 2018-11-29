@@ -26,4 +26,4 @@ class BaseSetup:
     def printScr(self):
         now = datetime.now()
         nomeArquivo = 'teste_'+str(now.day)+str(now.month)+str(now.year)+str(now.hour)+str(now.minute)+str(now.second)+'.png'
-        self.driver.save_screenshot("C:\\Projetos\\python_workspace\\learn_python\\screns\\" +nomeArquivo)
+        self.driver.save_screenshot("..\\python_workspace\\learn_python\\screns\\" +nomeArquivo)
