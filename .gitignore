@@ -3,3 +3,5 @@
 /.idea
 
 /learn_python/screns/*.png
+/web/features/pages/__pycache__
+/android/features/pages/__pycache__
