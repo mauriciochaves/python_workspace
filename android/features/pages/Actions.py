@@ -9,7 +9,6 @@ class HomeActions(BasePage):
     def click_on_forgot_password (self):
         super().click(HomePage.FORGOT_MY_PASSWORD)
 
-
     def get_error_user (self):
         element = super().elements_by_id(HomePage.ERROR_ID)[0]
         return element.text
