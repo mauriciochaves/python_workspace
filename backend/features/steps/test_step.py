@@ -11,7 +11,13 @@ from util.utils import get, post, delete, put, generate_data_file
 def step_impl(context, email, password):
     data = generate_data_file(email=email, password=password)
     context.response = post(context.base_url + "register", data=data)
-    context.token = context.response.json()['token']
+
+
+@step(u'I register an user with email folowing data')
+def step_impl(context ):
+    for row in context.table:
+        data = generate_data_file(email=row['email'], password=row['password'])
+        context.response = post(context.base_url + "register", data=data)
 
 
 @step(u'I login with email "{email}" and "{password}"')
