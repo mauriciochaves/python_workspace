@@ -3,7 +3,7 @@ from pages.Actions import *
 
 @given(u'I am on Home Page')
 def step_impl(context):
-    context.page_object = DeviceHomeActions(context.driver)
+    context.page_object = HomeActions(context.driver)
     context.page_object.open_application()
 
 @when(u'I click login without informing a user or password')
