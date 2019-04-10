@@ -1,3 +1,5 @@
+# language:en
+
 Feature: User
 
     Background: SETUP
@@ -26,21 +28,21 @@ Feature: User
         When I search the employee 1
         Then I verify that status code is "200"
 
-
+    @mcsj
     Scenario Outline: Search employee list - search with token
         Given I register an employee with name <name> and job <job>
         When I get employee list with page <page>
         Then I verify that status code is "200"
 
 
-        Examples: Platinum Client
+        Scenarios: Platinum Client
         | name      | job            | page  |
         | Morpheus  | leader         | 2     |
         | John      | zion resident  | 3     |
         | Maven     | Engineer       | 4     |
 
 
-        Examples: Gold Client
+        Scenarios: Gold Client
         | name       | job            | page  |
         | Jack       | leader         | 5     |
         | Lit        | zion resident  | 6     |

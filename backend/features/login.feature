@@ -1,3 +1,5 @@
+# language:en
+
 Feature: Login
 
    Background: SETUP
