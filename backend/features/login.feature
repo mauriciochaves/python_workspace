@@ -13,5 +13,5 @@ Feature: Login
 
 
    Scenario: Login unsuccessful
-        Given I login with email "mauricio.chaves.silva.junior@gmail.com"
+        Given I login only with email "mauricio.chaves.silva.junior@gmail.com"
         Then I verify that status code is "400"

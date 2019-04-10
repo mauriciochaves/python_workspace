@@ -13,7 +13,7 @@ def get(url, token, **param):
         print_exception("request GET failed:", err, response)
 
 
-def post(url, data, token = None, content_type = 'application/json'):
+def post(url, token = None, data = {}, content_type = 'application/json'):
     header = generate_header() if token == None else generate_header(content_type=content_type, token=token)
 
     try:
@@ -25,7 +25,7 @@ def post(url, data, token = None, content_type = 'application/json'):
         print("\n >>'header' can bot be 'str'<<" + "\n\nfunction name: " + post.__name__ + "\nmessage: " + str(error))
 
 
-def put(url, data, token, content_type = 'application/json'):
+def put(url, token, data, content_type = 'application/json'):
     header = generate_header() if token == None else generate_header(content_type=content_type, token=token)
 
     try:

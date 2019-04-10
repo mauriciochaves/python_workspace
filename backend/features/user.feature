@@ -1,8 +1,7 @@
-Feature: Login
+Feature: User
 
     Background: SETUP
-        Given I register an user with email "mauricio.chaves.junior" and "123456"
-        And I login with email "mauricio.chaves.junior" and "123456"
+        Given I prepare environment for tests run
 
 
     Scenario: Create employee - post with token
@@ -28,7 +27,21 @@ Feature: Login
         Then I verify that status code is "200"
 
 
-    Scenario: Search employee list- search with token
-        Given I register an employee with name "morpheus" and job "leader"
-        When I get employee list with page "2"
+    Scenario Outline: Search employee list - search with token
+        Given I register an employee with name <name> and job <job>
+        When I get employee list with page <page>
         Then I verify that status code is "200"
+
+
+        Examples: Platinum Client
+        | name      | job            | page  |
+        | Morpheus  | leader         | 2     |
+        | John      | zion resident  | 3     |
+        | Maven     | Engineer       | 4     |
+
+
+        Examples: Gold Client
+        | name       | job            | page  |
+        | Jack       | leader         | 5     |
+        | Lit        | zion resident  | 6     |
+        | Marvel     | Engineer       | 7     |
