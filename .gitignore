@@ -3,4 +3,9 @@ util/__pycache__
 frontend/features/pages/__pycache__
 frontend/features/__pycache__
 mobile/features/pages/__pycache__
-backend/allure_results
+backend/allure-results
+backend/allure-html
+frontend/allure-results
+frontend/allure-html
+mobile/allure-results
+mobile/allure-html
