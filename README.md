@@ -7,6 +7,11 @@
 
 ## Installation
 
+* [Appium-Python-Client](https://pypi.org/project/Appium-Python-Client/)
+* [Selenium-WebDriver](https://www.seleniumhq.org/)
+* [Requests](https://requests-docs-pt.readthedocs.io/pt_BR/latest/user/quickstart.html)
+* [Behave](https://behave.readthedocs.io/en/latest/)
+* [PyHamcrest](https://github.com/hamcrest/PyHamcrest)
 * Generate Report [allure-behave](https://pypi.org/project/allure-behave/)
 * [scoop](https://github.com/lukesampson/scoop)
 
