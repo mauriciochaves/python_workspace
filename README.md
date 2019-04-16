@@ -15,7 +15,7 @@
 pip install -r requirements.txt
 ```
 
-##Comand lines
+## Comand lines
 
 Windows (PowerShell)
 ```powershell
@@ -29,8 +29,8 @@ sudo apt-get install allure
 ```
 
 
-##Usage
-* Run Tests
+## Usage
+Run Tests
 ```behave
 behave -f allure_behave.formatter:AllureFormatter -o allure_results ./features
 allure serve allure_results
