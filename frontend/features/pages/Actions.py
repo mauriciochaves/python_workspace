@@ -5,8 +5,8 @@ from pages.Pages import AuthenticationPage
 
 class HomeActions(BasePage):
  
-    def open_application (self):
-        super().open_url(HomePage.URL)
+    def open_application (self, url):
+        super().open_url(url)
     
 
     def get_page_title(self):

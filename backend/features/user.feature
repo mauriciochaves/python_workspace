@@ -28,7 +28,7 @@ Feature: User
         When I search the employee 1
         Then I verify that status code is "200"
 
-    @mcsj
+
     Scenario Outline: Search employee list - search with token
         Given I register an employee with name <name> and job <job>
         When I get employee list with page <page>
