@@ -53,6 +53,6 @@ allure serve allure-results
 
 HTML file
 
-Open html file in <h1>allure-html\index.html</h1> with Firefox or Edge
+Open html file in <b>allure-html\index.html</b> with Firefox or Edge
 
 Open with Chrome follow the orientation [How to launch html using Chrome at “--allow-file-access-from-files” mode?](https://stackoverflow.com/questions/18586921/how-to-launch-html-using-chrome-at-allow-file-access-from-files-mode)
