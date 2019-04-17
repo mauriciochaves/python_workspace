@@ -1,5 +1,6 @@
 import json
 import requests
+import os
 
 
 def get(url, token, **param):
@@ -75,3 +76,11 @@ def generate_url_with_param(url, param):
             else:
                 url = url + '&' + str(key) + '=' + str(param[key])
     return url
+
+
+def generate_report(system):
+    if system.lower() == 'win':
+        os.system("powershell.exe -Command '& allure generate allure-results --clean -o allure-html'")
+        os.system("ren allure-html' allure-html")
+    elif system.lower() == 'linux':
+        os.system("allure generate allure-results --clean -o allure-html")
