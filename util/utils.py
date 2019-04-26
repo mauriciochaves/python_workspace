@@ -82,5 +82,7 @@ def generate_report(system):
     if system.lower() == 'win':
         os.system("powershell.exe -Command '& allure generate allure-results --clean -o allure-html'")
         os.system("ren allure-html' allure-html")
+        os.system('start microsoft-edge: file:///C:/Projetos/Pessoais/python_workspace/backend/allure-html/index.html')
+
     elif system.lower() == 'linux':
         os.system("allure generate allure-results --clean -o allure-html")
