@@ -22,33 +22,33 @@ def before_all(context):
     # desired_caps['app'] = os.path.abspath(os.path.join(os.path.dirname(__file__),'apks/(name_apk)'))
     
     context.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
-    with open("time.txt", "a") as f:
+    with open("Execution_report.txt", "a") as f:
         print("Execution Start: "+str(datetime.now()), file=f)
 
 
 def before_feature(context, feature):
-    with open("time.txt", "a") as f:
+    with open("Execution_report.txt", "a") as f:
         print(context.feature.name, file=f)
         print("Feature Execution Start: "+str(datetime.now()), file=f)
 
 
 def before_scenario(context, scenario):
-    with open("scenarios.txt", "a") as f:
+    with open("Execution_report.txt", "a") as f:
         print(context.scenario.name, file=f)
 
 
 def after_scenario(context, scenario):
     context.driver.start_activity("com.android.chrome", "com.google.android.apps.chrome.Main")
-    with open("scenarios.txt", "a") as f:
+    with open("Execution_report.txt", "a") as f:
         print(context.scenario.name, file=f)
 
 
 def after_feature(context, feature):
-    with open("time.txt", "a") as f:
+    with open("Execution_report.txt", "a") as f:
         print("Feature Execution End: "+str(datetime.now()), file=f)
 
 
 def after_all(context):
     generate_report(context.config.userdata['SYSTEM'])
-    with open("time.txt", "a") as f:
+    with open("Execution_report.txt", "a") as f:
         print("Execution End: "+str(datetime.now()), file=f)
