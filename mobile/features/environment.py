@@ -19,6 +19,7 @@ def before_all(context):
     desired_caps['androidDeviceReadyTimeout'] = '30' # tempo limite em segundos usado para aguardar que o dispositivo fique pronto após a inicialização
     desired_caps['autoWebviewTimeout'] = '30000' # tempo limite em milisegundos usado para aguardar que o context webview se torne ativo
     desired_caps['appWaitActivity'] = 'com.android.chrome, com.google.android.apps.chrome.Main' # aguarda determinadas Activitys carregarem, importante setar a Activity de Login para não quebrar de um scenario para outro
+    desired_caps['newCommandTimeout'] = 0
     # desired_caps['app'] = os.path.abspath(os.path.join(os.path.dirname(__file__),'apks/(name_apk)'))
     
     context.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
