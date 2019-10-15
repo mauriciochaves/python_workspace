@@ -27,8 +27,10 @@ pip install -r requirements.txt
 
 Windows (PowerShell)
 ```powershell
-iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
-scoop install allure
+1. Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+2. Type in Y and click on ENTER
+3. iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+4. scoop install allure
 ```
 
 
