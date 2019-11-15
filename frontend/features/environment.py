@@ -14,4 +14,5 @@ def before_all(context):
 
 
 def after_all(context):
-    generate_report(context.config.userdata['SYSTEM'])
+    #generate_report(context.config.userdata['SYSTEM'])
+    pass 

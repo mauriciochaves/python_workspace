@@ -10,10 +10,11 @@ Feature: Login
 
 
    Scenario: Login successful - post without token
-        Given I login with email "mauricio.chaves.junior@live.com" and "123456"
+        Given I login with email "eve.holt@reqres.in" and "cityslicka"
         Then I verify that status code is "200"
 
 
    Scenario: Login unsuccessful
         Given I login only with email "mauricio.chaves.silva.junior@gmail.com"
         Then I verify that status code is "400"
+        And I verify that response contains "Missing password" as "error" attribute 

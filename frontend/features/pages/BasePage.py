@@ -18,8 +18,8 @@ class BasePage:
         self.wait(EC.element_to_be_clickable(locator)).click()
 
 
-    def find(self, locator, seconds = 5):
-        element = self.wait(EC.visibility_of_element_located(locator), seconds)
+    def find(self, ec, seconds = 5):
+        element = self.wait(ec, seconds)
         return element
     
 
@@ -27,15 +27,15 @@ class BasePage:
         return WebDriverWait(self.driver, seconds).until(condition)
 
 
-    def type_in(self, locator, text, set_clear = True):
-        element = self.find(locator)
+    def type_in(self, ec, text, set_clear = True):
+        element = self.find(ec)
         if set_clear:
             element.clear()
         element.send_keys(text)
 
 
-    def select_in_combo_visible_text(self, locator, value):
-        Select(self.wait(EC.visibility_of_element_located(locator))).select_by_visible_text(value)
+    def select_in_combo_visible_text(self, locator, text):
+        Select(self.wait(EC.visibility_of_element_located(locator))).select_by_visible_text(text)
 
 
     def select_in_combo_by_value(self, locator, value):
