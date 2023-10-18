@@ -7,9 +7,9 @@
 
 ## Installation
 
-
 * [Appium-Python-Client](https://pypi.org/project/Appium-Python-Client/)
 * [Selenium-WebDriver](https://www.seleniumhq.org/)
+* [Webdriver Manager](https://pypi.org/project/webdriver-manager/)
 * [Requests](https://requests-docs-pt.readthedocs.io/pt_BR/latest/user/quickstart.html)
 * [Behave](https://behave.readthedocs.io/en/latest/)
 * [PyHamcrest](https://github.com/hamcrest/PyHamcrest)
