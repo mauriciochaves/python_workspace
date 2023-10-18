@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 from hamcrest import assert_that, is_
 PARENT_PATH = os.path.abspath("..")
 if PARENT_PATH not in sys.path:
@@ -18,6 +19,12 @@ def step_impl(context ):
     for row in context.table:
         data = generate_data_file(email=row['email'], password=row['password'])
         context.response = post(context.base_url + "register", data=data)
+
+
+@step(u'I try to register an user using only email "{email}"')
+def step_impl(context, email):
+    data = generate_data_file(email=email)
+    context.response = post(context.base_url + "register", data=data)
 
 
 @step(u'I login with email "{email}" and "{password}"')
@@ -71,9 +78,15 @@ def step_impl(context, status_code):
     assert_that(context.response.status_code, is_(int(status_code)))
 
 
+@then(u'I verify that response contains "{response}" as "{attribute}" attribute')
+def step_impl(context, response, attribute):
+    text = context.response.json()
+    assert_that(text[str(attribute)], is_(str(response)))
+
+
 @step(u'I prepare environment for tests run')
 def step_impl(context):
     context.execute_steps('''
-        Given I register an user with email "mauricio.chaves.junior" and "123456"
-        And I login with email "mauricio.chaves.junior" and "123456"
+        Given I register an user with email "eve.holt@reqres.in" and "cityslicka"
+        And I login with email "eve.holt@reqres.in" and "cityslicka"
     ''')
