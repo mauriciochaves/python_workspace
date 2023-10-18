@@ -10,7 +10,7 @@ if PARENT_PATH not in sys.path:
 #from util.utils import generate_report
 
 def before_all(context):
-context.base_url = "http://automationpractice.com/index.php"
+    context.base_url = "http://automationpractice.com/index.php"
     context.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
     context.driver.delete_all_cookies()
     context.driver.maximize_window()
